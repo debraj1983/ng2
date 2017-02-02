@@ -8,21 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var StudentModel_1 = require("../../Model/StudentModel");
-var AppConstant_1 = require("../../AppConstant");
-var StudentComponent = (function () {
-    function StudentComponent() {
-        this.studentobj = new StudentModel_1.Student();
+var core_1 = require('@angular/core');
+var platform_browser_1 = require('@angular/platform-browser');
+var EmployeeComponent_1 = require('../Component/Employee/EmployeeComponent');
+var forms_1 = require('@angular/forms');
+var EmployeeModule = (function () {
+    function EmployeeModule() {
     }
-    StudentComponent = __decorate([
-        core_1.Component({
-            selector: "student-ui",
-            templateUrl: AppConstant_1.AppConstant.COMPONENT_PATH + "Student/Student.html"
+    EmployeeModule = __decorate([
+        core_1.NgModule({
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
+            declarations: [EmployeeComponent_1.EmployeeComponent],
+            bootstrap: [EmployeeComponent_1.EmployeeComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], StudentComponent);
-    return StudentComponent;
+    ], EmployeeModule);
+    return EmployeeModule;
 }());
-exports.StudentComponent = StudentComponent;
-//# sourceMappingURL=StudentComponent.js.map
+exports.EmployeeModule = EmployeeModule;
+//# sourceMappingURL=EmployeeModule.js.map

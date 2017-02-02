@@ -1,13 +1,13 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { StudentComponent }  from '../Component/Student/StudentComponent';
+import { EmployeeComponent }  from '../Component/Employee/EmployeeComponent';
 import { FormsModule } from '@angular/forms'
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ StudentComponent ],
-  bootstrap:    [ StudentComponent ]
+  declarations: [ EmployeeComponent ],
+  bootstrap:    [ EmployeeComponent ]
 })
-export class StudentModule { 
+export class EmployeeModule { 
 
 }
