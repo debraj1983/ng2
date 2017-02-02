@@ -1,5 +1,37 @@
-<ul>
-<li *ngFor="let emp of employees">
-  <span class="badge">{{emp.EmpID}}</span> {{emp.EmpName}}
-</li>
+<ul class="employee-list">
+	<li *ngFor="let emp of employees"
+	(click)="selectEmployee(emp)">
+  		<span class="badge">{{emp.EmpID}}</span> {{emp.EmpName}}
+	</li>
 </ul>
+
+
+<div class="overlay" *ngIf="isSelectedEmployee"></div>
+<div class="modal" *ngIf="isSelectedEmployee">
+	<a class="close" (click)="isSelectedEmployee = !isSelectedEmployee">X</a>
+	<div class="row">
+		<div class="label">Employee ID:</div>
+		<div class="value">{{selectedEmployee.EmpID}}</div>
+	</div>
+	<div class="row">
+		<div class="label">Name:</div>
+		<div class="value">{{selectedEmployee.EmpName}}</div>
+	</div>
+	<div class="row">
+		<div class="label">DOB:</div>
+		<div class="value">{{selectedEmployee.EmpDob}}</div>
+	</div>
+	<div class="row">
+		<div class="label">Email ID:</div>
+		<div class="value">{{selectedEmployee.EmpEmail}}</div>
+	</div>
+	<div class="row">
+		<div class="label">Address:</div>
+		<div class="value">{{selectedEmployee.EmpAddress}}</div>
+	</div>
+	<div class="row">
+		<div class="label">Contact No:</div>
+		<div class="value">{{selectedEmployee.EmpContact}}</div>
+	</div>
+</div>
+
